@@ -16,9 +16,9 @@
     "for_types": ["Public"],
     "required": true
   },{
-    "key": "domainName",
+    "key": "subdomain",
     "type" : "text",
-    "description": "Domain Name",
+    "description": "Subdomain Name",
     "for_types": ["Public"],
     "required": true
   },{
