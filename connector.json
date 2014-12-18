@@ -21,12 +21,6 @@
     "description": "Subdomain Name",
     "for_types": ["Public"],
     "required": true
-  },{
-    "key": "password",
-    "type" : "text",
-    "description": "Password",
-    "for_types": ["Public"],
-    "required": true
   }],
   "samples" : {
     "getting_started" : "./samples/getting_started.js"
