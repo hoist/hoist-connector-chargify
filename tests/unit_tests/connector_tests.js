@@ -280,8 +280,8 @@ describe('ChargifyConnector', function () {
           method: 'POST',
           resolveWithFullResponse: true,
           uri: 'https://1234567890:x@test-domain.chargify.com/coupons.json',
-          body: '{"Staff":{"Name":"John"}}',
-          contentType: 'application/json'
+          body: data,
+          json: true
         };
         var result;
         before(function () {
@@ -332,8 +332,8 @@ describe('ChargifyConnector', function () {
           method: 'PUT',
           resolveWithFullResponse: true,
           uri: 'https://1234567890:x@test-domain.chargify.com/coupons.json',
-          body: '{"Staff":{"Name":"John"}}',
-          contentType: 'application/json'
+          body: data,
+          json: true
         };
         var result;
         before(function () {
