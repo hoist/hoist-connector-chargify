@@ -1,9 +1,8 @@
-
 {
   "name": "Chargify",
-  "slug" : "chargify",
+  "slug": "chargify",
   "url": "https://www.chargify.com/",
-  "auth_types" : {
+  "auth_types": {
     "Public": {
       "setup_help": "./samples/getting_started.md",
       "requires_signing": true
@@ -11,21 +10,116 @@
   },
   "settings": [{
     "key": "apiKey",
-    "type" : "text",
+    "type": "text",
     "description": "API Key",
     "for_types": ["Public"],
     "required": true
-  },{
+  }, {
     "key": "subdomain",
-    "type" : "text",
+    "type": "text",
     "description": "Subdomain Name",
     "for_types": ["Public"],
     "required": true
   }],
-  "samples" : {
-    "getting_started" : "./samples/getting_started.js"
+  "samples": {
+    "getting_started": "./samples/getting_started.js"
   },
-  "endpoints" : {
-    
+  "endpoints": {
+    "Adjustments": {
+      "sample": "./samples/adjustments.js",
+      "docs": "https://docs.chargify.com/api-adjustments"
+    },
+    "Allocations": {
+      "sample": "./samples/allocations.js",
+      "docs": "https://docs.chargify.com/api-allocations"
+    },
+    "Billing Portal": {
+      "sample": "./samples/billing_portal.js",
+      "docs": "https://docs.chargify.com/api-billing-portal"
+    },
+    "Charges": {
+      "sample": "./samples/charges.js",
+      "docs": "https://docs.chargify.com/api-charges"
+    },
+    "Components": {
+      "sample": "./samples/components.js",
+      "docs": "https://docs.chargify.com/api-components"
+    },
+    "Coupons": {
+      "sample": "./samples/coupons.js",
+      "docs": "https://docs.chargify.com/api-coupons"
+    },
+    "Coupon Subcodes": {
+      "sample": "./samples/coupon_subcodes.js",
+      "docs": "https://docs.chargify.com/api-coupon-subcodes"
+    },
+    "Customers": {
+      "sample": "./samples/customers.js",
+      "docs": "https://docs.chargify.com/api-customers"
+    },
+    "Events": {
+      "sample": "./samples/events.js",
+      "docs": "https://docs.chargify.com/api-events"
+    },
+    "Invoices": {
+      "sample": "./samples/invoices.js",
+      "docs": "https://docs.chargify.com/api-invoices"
+    },
+    "Metadata": {
+      "sample": "./samples/metadata.js",
+      "docs": "https://docs.chargify.com/api-metadata"
+    },
+    "Metafields": {
+      "sample": "./samples/metafields.js",
+      "docs": "https://docs.chargify.com/api-metafields"
+    },
+    "Metered Usage": {
+      "sample": "./samples/metered_usage.js",
+      "docs": "https://docs.chargify.com/api-metered-usage"
+    },
+    "Migrations": {
+      "sample": "./samples/credits.js",
+      "docs": "https://docs.chargify.com/api-credits"
+    },
+    "Payments": {
+      "sample": "./samples/payments.js",
+      "docs": "https://docs.chargify.com/api-payments"
+    },
+    "Payment Profiles": {
+      "sample": "./samples/payment_profiles.js",
+      "docs": "https://docs.chargify.com/api-payment-profiles"
+    },
+    "Products": {
+      "sample": "./samples/products.js",
+      "docs": "https://docs.chargify.com/api-products"
+    },
+    "Quantity Component Allocations": {
+      "sample": "./samples/quantity_component_allocations.js",
+      "docs": "https://docs.chargify.com/api-quantity-allocations"
+    },
+    "Refunds": {
+      "sample": "./samples/refunds.js",
+      "docs": "https://docs.chargify.com/api-refunds"
+    },
+    "Renewal Preview": {
+      "sample": "./samples/renewal_period.js",
+      "docs": "https://docs.chargify.com/api-renewal-period"
+    },
+    "Statements": {
+      "sample": "./samples/statements.js",
+      "docs": "https://docs.chargify.com/api-statements"
+    },
+    "Stats": {
+      "sample": "./samples/stats.js",
+      "docs": "https://docs.chargify.com/api-stats"
+    },
+    "Subscriptions": {
+      "sample": "./samples/subscriptions.js",
+      "docs": "https://docs.chargify.com/api-subscriptions"
+    },
+    "Transactions": {
+      "sample": "./samples/transactions.js",
+      "docs": "https://docs.chargify.com/api-transactions"
+    }
   }
 }
