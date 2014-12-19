@@ -77,10 +77,6 @@
       "sample": "./samples/metered_usage.js",
       "docs": "https://docs.chargify.com/api-metered-usage"
     },
-    "Migrations": {
-      "sample": "./samples/credits.js",
-      "docs": "https://docs.chargify.com/api-credits"
-    },
     "Payments": {
       "sample": "./samples/payments.js",
       "docs": "https://docs.chargify.com/api-payments"
