@@ -89,10 +89,6 @@
       "sample": "./samples/products.js",
       "docs": "https://docs.chargify.com/api-products"
     },
-    "Quantity Component Allocations": {
-      "sample": "./samples/quantity_component_allocations.js",
-      "docs": "https://docs.chargify.com/api-quantity-allocations"
-    },
     "Refunds": {
       "sample": "./samples/refunds.js",
       "docs": "https://docs.chargify.com/api-refunds"
