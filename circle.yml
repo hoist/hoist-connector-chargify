@@ -21,19 +21,19 @@ dependencies:
     - "~/docker"
   override:
     - mkdir -p ~/docker
-    - if [[ -e ~/docker/connector-quickbooks.tar ]]; then docker load -i ~/docker/connector-quickbooks.tar; fi
-    - docker build -t quay.io/hoist/connector-quickbooks:${CIRCLE_BRANCH//feature\//} .
-    - docker save "quay.io/hoist/connector-quickbooks" > ~/docker/connector-quickbooks.tar
+    - if [[ -e ~/docker/connector-chargify.tar ]]; then docker load -i ~/docker/connector-chargify.tar; fi
+    - docker build -t quay.io/hoist/connector-chargify:${CIRCLE_BRANCH//feature\//} .
+    - docker save "quay.io/hoist/connector-chargify" > ~/docker/connector-chargify.tar
 test:
   override:
     - docker kill mongodb; true;
     - docker rm mongodb; true;
-    - docker kill hoist-connector-quickbooks-test; true;
-    - docker rm hoist-connector-quickbooks-test; true;
+    - docker kill hoist-connector-chargify-test; true;
+    - docker rm hoist-connector-chargify-test; true;
     - docker run -d --name mongodb mongo
-    - docker run -t --link mongodb:db --name hoist-connector-quickbooks-test --entrypoint gulp quay.io/hoist/connector-quickbooks:${CIRCLE_BRANCH//feature\//} test
+    - docker run -t --link mongodb:db --name hoist-connector-chargify-test --entrypoint gulp quay.io/hoist/connector-chargify:${CIRCLE_BRANCH//feature\//} test
   post:
-    - docker cp hoist-connector-quickbooks-test:/usr/src/app/coverage ~/
+    - docker cp hoist-connector-chargify-test:/usr/src/app/coverage ~/
 general:
   artifacts:
     - ~/coverage/*
@@ -47,7 +47,7 @@ deployment:
     commands:
       - echo ${DOCKER_CONFIG} > .dockercfg
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS quay.io
-      - docker push quay.io/hoist/connector-quickbooks:${CIRCLE_BRANCH//feature\//}
+      - docker push quay.io/hoist/connector-chargify:${CIRCLE_BRANCH//feature\//}
 notify:
   webhooks:
     - url: https://overlord.hoist.io/api/webhook/circleci?api_token=xc1zrzacmxp9samlj9nya4gzay
