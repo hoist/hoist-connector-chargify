@@ -45,4 +45,4 @@ log/*
 config/runtime.json
 .queues
 
-config/test.json
+.npmrc
