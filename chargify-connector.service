@@ -8,8 +8,8 @@ User=core
 Type=oneshot
 ExecStartPre=-/usr/bin/docker kill chargify-connector-deploy
 ExecStartPre=-/usr/bin/docker rm chargify-connector-deploy
-ExecStartPre=-/usr/bin/docker pull quay.io/hoist/connector-chargify:master
-ExecStart=/usr/bin/docker run -h chargify-connector-deploy --name chargify-connector-deploy -e "ROOT_CONNECTOR_DIR=/shares/connectors" --volumes-from config -P quay.io/hoist/connector-chargify:master
+ExecStartPre=-/usr/bin/docker pull hoist/connector-chargify:master
+ExecStart=/usr/bin/docker run -h chargify-connector-deploy --name chargify-connector-deploy -e "ROOT_CONNECTOR_DIR=/shares/connectors" --volumes-from config -P hoist/connector-chargify:master
 ExecStop=/usr/bin/docker stop chargify-connector-deploy
 ExecStopPost=-/usr/bin/docker kill chargify-connector-deploy
 ExecStopPost=-/usr/bin/docker rm chargify-connector-deploy
